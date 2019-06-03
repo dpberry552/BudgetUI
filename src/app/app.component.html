@@ -8,4 +8,5 @@
     <button mat-button>Profile</button>
   </mat-toolbar-row>
 </mat-toolbar>
-<app-login></app-login>
+<app-login *ngIf="login"></app-login>
+<router-outlet></router-outlet>

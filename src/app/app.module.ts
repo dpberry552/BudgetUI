@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,14 +20,24 @@ import {
 import { LoginComponent } from './components/login/login.component';
 import { AppConfigService } from './services/app-config.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { AccountComponent } from './components/account/account.component';
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: 'accountSummary',
+    component: AccountComponent
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -40,7 +50,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     MatOptionModule,
     MatSelectModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     MatButtonModule,

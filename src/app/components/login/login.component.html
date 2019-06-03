@@ -5,13 +5,13 @@
             <h3>Please log in</h3>
             <form>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                    <input type="text" class="form-control" placeholder="Your username *" value="" name="un" [(ngModel)]="username" />
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                    <input type="password" class="form-control" placeholder="Your Password *" value="" name="pw" [(ngModel)]="password"/>
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="btnSubmit" value="Login" />
+                    <input type="submit" class="btnSubmit" value="Login" name="auth" (click)="authenticate()"/>
                 </div>
                 <div class="form-group">
                     <a href="#" class="ForgetPwd">Forgot Password?</a>

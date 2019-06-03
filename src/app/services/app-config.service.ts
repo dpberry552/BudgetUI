@@ -19,11 +19,9 @@ export class AppConfigService {
   }
 
   get apiBaseUrl() {
-
     if (!this.appConfig) {
       throw Error('Config file not loaded!');
     }
-
     return this.appConfig.apiBaseUrl;
   }
 
