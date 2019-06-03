@@ -6,6 +6,8 @@
     <button mat-button>Home</button>
     <button mat-button>Accounts</button>
     <button mat-button>Profile</button>
+    <span class="fill-remaining-space"></span>
+    <span *ngIf="user">Welcome, {{user.UserName}}</span>
   </mat-toolbar-row>
 </mat-toolbar>
 <app-login *ngIf="login"></app-login>

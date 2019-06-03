@@ -4,3 +4,7 @@
     background-color: #5c51bb;
     color: white;
   }
+
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
