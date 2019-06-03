@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     this.loginService.authenticateUser({UserName: this.username, Password: this.password}).subscribe((user: BudgetUser) => {
       if(user) {
         this.router.navigate(['accountSummary']).then(_ => {
-          this.eventHandler.userAuthenticated();
+          this.eventHandler.userAuthenticated(user);
           console.log(user.UserName + ' successfully logged in!')
         });
       }
