@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
       if(user) {
         this.router.navigate(['accountSummary']).then(_ => {
           this.eventHandler.userAuthenticated(user);
+          localStorage.setItem('loggedIn', 'true');
           console.log(user.UserName + ' successfully logged in!')
         });
       }

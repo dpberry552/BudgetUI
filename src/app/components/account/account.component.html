@@ -1,3 +1,16 @@
-<p>
-  account works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-card *ngFor="let account of accounts" style="margin-top: 15px; background-color: #f6f5ff;">
+        <div style="display: block">
+            <a routerLink="/transactions/{{account.Id}}"><span style="padding-right: 100px; font-weight: bold;">{{account.Description}} - {{account.Institution}}</span></a>
+            <mat-card-content>
+              <br>Balance: {{account.Balance | currency}}<br>
+              Account Type: {{account.Type}}<br>
+              Latest Transaction: 3/1/2020
+            </mat-card-content>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

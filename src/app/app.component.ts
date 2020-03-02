@@ -11,10 +11,12 @@ export class AppComponent {
   title = 'budget-app';
   login: boolean = true;
   user: BudgetUser;
+
   constructor(private eventHandler: EventHandlerService) { 
     eventHandler.authenticated.subscribe(user => {
       this.login = false;
       this.user = user;
+      localStorage.setItem('curUser', JSON.stringify(user));
     })
   }
 }

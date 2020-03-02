@@ -22,6 +22,7 @@ import { AppConfigService } from './services/app-config.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { Routes, RouterModule } from '@angular/router';
+import { TransactionComponent } from './components/transaction/transaction.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    TransactionComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

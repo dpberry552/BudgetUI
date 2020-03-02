@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AppConfigService } from './app-config.service';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -8,16 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AccountService {
 
-  apiBaseURL: string;
-  accountURL: string;
+  apiBaseURL: string = environment.apiBaseUrl;
+  accountURL: string = environment.accountURL;
   constructor(private appConfigService: AppConfigService, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.apiBaseURL = this.appConfigService.apiBaseUrl;
-    this.accountURL = this.appConfigService.accountURL;
+
   }
 
-  getAccounts() {
-    return this.http.get(this.apiBaseURL + this.accountURL).toPromise();
+  getAccounts(userId: string) {
+    return this.http.get(this.apiBaseURL + this.accountURL + '/user/' + userId).toPromise();
   }
 }
