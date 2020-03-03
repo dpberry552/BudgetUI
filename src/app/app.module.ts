@@ -15,7 +15,8 @@ import {
   MatFormFieldModule,
   MatOptionModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatTableModule
 } from '@angular/material';
 import { LoginComponent } from './components/login/login.component';
 import { AppConfigService } from './services/app-config.service';
@@ -53,7 +54,8 @@ const routes: Routes = [
     MatSelectModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   exports: [
     MatButtonModule,

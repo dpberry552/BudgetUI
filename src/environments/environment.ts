@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   apiBaseUrl: "http://localhost/BudgetWebAPI/api/",
   accountURL: "account",
-  userURL: "user"
+  userURL: "user",
+  transactionURL: "transaction"
 };
 
 /*
