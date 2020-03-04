@@ -6,11 +6,11 @@ table {
     height: 0;
   }
   
-  tr.transaction-row:not(.example-expanded-row):hover {
+  tr.transaction-row:not(.transaction-expanded-row):hover {
     background: whitesmoke;
   }
   
-  tr.transaction-row:not(.example-expanded-row):active {
+  tr.transaction-row:not(.transaction-expanded-row):active {
     background: #efefef;
   }
   

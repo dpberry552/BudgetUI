@@ -33,7 +33,7 @@ export class TransactionComponent {
   }
 
   transactions: Transaction[];
-  fields: string[] = ['Description', 'Type', 'Amount', 'Date'];
+  fields: string[] = ['Description', 'Type', 'Amount', 'Date', 'Expand'];
   user: BudgetUser;
   expandedTransaction: Transaction | null
 
