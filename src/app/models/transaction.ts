@@ -1,3 +1,5 @@
+import { TransactionLine } from './transactionline';
+
 export class Transaction {
     AccountId: number;
     Description: string;
@@ -5,4 +7,5 @@ export class Transaction {
     Amount: number;
     ActualDateTime: Date;
     PostDateTime: Date;
+    TransactionLines: TransactionLine[];
 }
