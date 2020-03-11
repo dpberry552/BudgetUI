@@ -5,6 +5,8 @@ import { TransactionService } from 'src/app/services/transaction.service';
 import { Transaction } from 'src/app/models/transaction';
 import { BudgetUser } from 'src/app/models/budgetUser';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { EditTransactionComponent } from '../edit-transaction/edit-transaction.component';
 
 /**
  * @title Table with expandable rows
@@ -22,7 +24,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   ],
 })
 export class TransactionComponent {
-  constructor(private route: ActivatedRoute, private tranService: TransactionService) {
+  constructor(private route: ActivatedRoute, private tranService: TransactionService, public editDialog: MatDialog) {
     this.route.params.subscribe( params => { 
       this.user = JSON.parse(localStorage.getItem('curUser'));
       if(this.user != null) {
@@ -33,7 +35,7 @@ export class TransactionComponent {
   }
 
   transactions: Transaction[];
-  fields: string[] = ['Description', 'Type', 'Amount', 'Date', 'Expand'];
+  fields: string[] = ['Description', 'Type', 'Amount', 'Date', 'Expand', 'Edit'];
   user: BudgetUser;
   expandedTransaction: Transaction | null
 
@@ -44,4 +46,16 @@ export class TransactionComponent {
       console.log(this.transactions);
     });
   }
+
+  openEditDialog(): void {
+    const dialogRef = this.editDialog.open(EditTransactionComponent, {
+      width: '250px',
+      data: { message: 'yay' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('dialog closed');
+    });
+  }
+
 }

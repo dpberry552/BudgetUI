@@ -16,7 +16,8 @@ import {
   MatOptionModule,
   MatSelectModule,
   MatInputModule,
-  MatTableModule
+  MatTableModule,
+  MatDialogModule
 } from '@angular/material';
 import { LoginComponent } from './components/login/login.component';
 import { AppConfigService } from './services/app-config.service';
@@ -24,6 +25,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AccountComponent } from './components/account/account.component';
 import { Routes, RouterModule } from '@angular/router';
 import { TransactionComponent } from './components/transaction/transaction.component';
+import { EditTransactionComponent } from './components/edit-transaction/edit-transaction.component';
 
 const routes: Routes = [
   {
@@ -37,7 +39,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     AccountComponent,
-    TransactionComponent
+    TransactionComponent,
+    EditTransactionComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -55,7 +58,8 @@ const routes: Routes = [
     MatInputModule,
     HttpClientModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
@@ -82,6 +86,7 @@ const routes: Routes = [
     },
     HttpClient
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [EditTransactionComponent]
 })
 export class AppModule { }
