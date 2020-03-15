@@ -1,3 +1,15 @@
-<p>
-  edit-transaction works!
-</p>
+<div class="row">
+  <div class="col-sm-6">
+    {{data.Description}}
+    <br><br>
+    <div *ngFor="let line of data.TransactionLines">
+      <mat-form-field>
+        <input matInput [(ngModel)]="line.Category">
+      </mat-form-field>
+      <mat-form-field style="margin-left: 10px;">
+        <input matInput [(ngModel)]="line.CategoryType">
+      </mat-form-field>
+      <br>
+    </div> 
+  </div>
+</div>

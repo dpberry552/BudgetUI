@@ -47,10 +47,10 @@ export class TransactionComponent {
     });
   }
 
-  openEditDialog(): void {
+  openEditDialog(t: Transaction): void {
     const dialogRef = this.editDialog.open(EditTransactionComponent, {
-      width: '250px',
-      data: { message: 'yay' }
+      width: '1000px',
+      data: t
     });
 
     dialogRef.afterClosed().subscribe(result => {
