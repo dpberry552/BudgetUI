@@ -2,3 +2,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~material-design-icons/iconfont/material-icons.css";
+
+
+.mat-header-cell {
+    font-weight: bold !important;
+    font-size: medium;
+  }
