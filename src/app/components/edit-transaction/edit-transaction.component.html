@@ -5,19 +5,21 @@
 </mat-toolbar>
 <div class="row">
   <div class="col-sm-12">
-    <label for="desc" style="margin-right: 15px;">Description:</label>
-    <mat-form-field id="desc">
+    <label for="desc">Description:</label>
+    <mat-form-field id="desc" style="margin-left: 15px; margin-right: 50px;">
       <input matInput [(ngModel)]="data.Description">
     </mat-form-field>
-    <label for="desc" style="margin-right: 15px; margin-left: 50px;">Type:</label>
-    <mat-form-field appearance="fill">
+    <label for="types">Type:</label>
+    <mat-form-field appearance="fill" id="types" style="margin-left: 15px;">
       <mat-select [value]="data.Type">
         <mat-option *ngFor="let type of types" [value]="type.value">
           {{type.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <br><br>
+    <!--
+
+     <br><br>
     <div *ngFor="let line of data.TransactionLines">
       <mat-form-field>
         <input matInput [(ngModel)]="line.Category">
@@ -27,5 +29,19 @@
       </mat-form-field>
       <br>
     </div> 
+    -->
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <label for="amt" style="margin-left: 23px;">Amount:</label>
+    <mat-form-field id="amt" style="margin-left: 15px; margin-right: 50px;">
+      <input matInput [(ngModel)]="data.Amount">
+    </mat-form-field>
+    <label for="date">Date:</label>
+    <mat-form-field id="date" style="margin-left: 15px;">
+      <input matInput [(ngModel)]="data.ActualDateTime">
+    </mat-form-field>
   </div>
 </div>
