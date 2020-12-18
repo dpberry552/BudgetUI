@@ -9,6 +9,12 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class EditTransactionComponent implements OnInit {
 
+  //eventually these will come from somewhere else
+  types: Array<any> = [
+    {value: 'Check', viewValue: 'Check'},
+    {value: 'Debit', viewValue: 'Debit'}
+  ];
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
