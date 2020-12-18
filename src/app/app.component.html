@@ -9,4 +9,4 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <app-login *ngIf="login"></app-login>
-<router-outlet></router-outlet>
+<router-outlet *ngIf="!login"></router-outlet>

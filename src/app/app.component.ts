@@ -14,7 +14,7 @@ export class AppComponent {
 
   constructor(private eventHandler: EventHandlerService) { 
     eventHandler.authenticated.subscribe(user => {
-      this.login = false;
+      this.login = localStorage.getItem('curUser') == null;
       this.user = user;
       localStorage.setItem('curUser', JSON.stringify(user));
     })

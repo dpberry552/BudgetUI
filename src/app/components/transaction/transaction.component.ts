@@ -5,7 +5,7 @@ import { TransactionService } from 'src/app/services/transaction.service';
 import { Transaction } from 'src/app/models/transaction';
 import { BudgetUser } from 'src/app/models/budgetUser';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { EditTransactionComponent } from '../edit-transaction/edit-transaction.component';
 
 /**
