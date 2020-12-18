@@ -1,6 +1,22 @@
+<mat-toolbar style="margin-bottom: 15px;">
+  <mat-toolbar-row>
+    Edit transaction
+  </mat-toolbar-row>
+</mat-toolbar>
 <div class="row">
-  <div class="col-sm-6">
-    {{data.Description}}
+  <div class="col-sm-12">
+    <label for="desc" style="margin-right: 15px;">Description:</label>
+    <mat-form-field id="desc">
+      <input matInput [(ngModel)]="data.Description">
+    </mat-form-field>
+    <label for="desc" style="margin-right: 15px; margin-left: 50px;">Type:</label>
+    <mat-form-field appearance="fill">
+      <mat-select [value]="data.Type">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{type.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     <br><br>
     <div *ngFor="let line of data.TransactionLines">
       <mat-form-field>
