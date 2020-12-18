@@ -8,3 +8,8 @@
     font-weight: bold !important;
     font-size: medium;
   }
+
+  .mat-toolbar {
+    background-color: #5c51bb;
+    color: white;
+  }
