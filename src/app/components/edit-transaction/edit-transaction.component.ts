@@ -22,4 +22,8 @@ export class EditTransactionComponent implements OnInit {
     console.log(this.data)
   }
 
+  updatedate(event) {
+    this.data.ActualDateTime = new Date(event);
+  }
+
 }

@@ -21,7 +21,7 @@
 
         <ng-container matColumnDef="Date">
           <th mat-header-cell *matHeaderCellDef> Date </th>
-          <td mat-cell *matCellDef="let transaction"> {{transaction.ActualDateTime}} </td>
+          <td mat-cell *matCellDef="let transaction"> {{transaction.ActualDateTime | date: 'MM/dd/yyyy'}} </td>
         </ng-container>
 
         <ng-container matColumnDef="Expand">

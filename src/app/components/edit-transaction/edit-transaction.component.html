@@ -41,7 +41,7 @@
     </mat-form-field>
     <label for="date">Date:</label>
     <mat-form-field id="date" style="margin-left: 15px;">
-      <input matInput [(ngModel)]="data.ActualDateTime">
+      <input type="date" matInput [ngModel]="data.ActualDateTime | date: 'yyyy-MM-dd'" (ngModelChange)="updatedate($event)">
     </mat-form-field>
   </div>
 </div>
