@@ -37,7 +37,7 @@
   <div class="col-sm-12">
     <label for="amt" style="margin-left: 23px;">Amount:</label>
     <mat-form-field id="amt" style="margin-left: 15px; margin-right: 50px;">
-      <input matInput [(ngModel)]="data.Amount">
+      <input matInput [ngModel]="data.Amount | currency" (ngModelChange)="currencyInputChanged($event)">
     </mat-form-field>
     <label for="date">Date:</label>
     <mat-form-field id="date" style="margin-left: 15px;">

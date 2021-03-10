@@ -26,4 +26,9 @@ export class EditTransactionComponent implements OnInit {
     this.data.ActualDateTime = new Date(event);
   }
 
+  currencyInputChanged(value) {
+    var num = value.replace(/[$,]/g, "");
+    return Number(num);
+  }
+
 }
