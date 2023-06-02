@@ -61,7 +61,8 @@ const routes: Routes = [
     FormsModule,
     MatTableModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   exports: [
     MatButtonModule,
